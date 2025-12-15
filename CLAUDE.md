@@ -36,7 +36,7 @@ Use HTML imports with `Bun.serve()`. Don't use `vite`. HTML imports fully suppor
 
 Server:
 
-```ts#sketch.js
+```ts#handPose.js
 import index from "./index.html"
 
 Bun.serve({
@@ -97,10 +97,10 @@ export default function Frontend() {
 root.render(<Frontend />);
 ```
 
-Then, run sketch.js
+Then, run handPose.js
 
 ```sh
-bun --hot ./sketch.js
+bun --hot ./handPose.js
 ```
 
 For more information, read the Bun API docs in `node_modules/bun-types/docs/**.md`.

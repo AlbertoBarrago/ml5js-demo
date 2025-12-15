@@ -1,7 +1,5 @@
 {
   "name": "devai",
-  "module": "src/js/sketch.js",
-  "type": "module",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
@@ -10,6 +8,6 @@
     "typescript": "^5"
   },
   "scripts": {
-    "start": "bun server.ts"
+    "start": "bun server.js"
   }
 }
