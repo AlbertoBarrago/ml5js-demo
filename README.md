@@ -23,7 +23,7 @@ The server will start at `http://localhost:3000`
 ## 📚 Available Demos
 
 ### 1. Body Pose Detection
-**URL:** `http://localhost:3000/`
+**URL:** `http://localhost:3000/hand-pose`
 
 Real-time body pose detection using your webcam. The demo:
 - Detects body keypoints in real-time
@@ -54,10 +54,20 @@ Train a custom neural network to classify product quality based on sensor data.
 5. Save your trained model for later use
 
 # 3 Body Segmentation
+**URL:** `http://localhost:3000/body-segmentation`
+
 Real-time body segmentation using your webcam.
+
+**Features:**
 - Detects body keypoints in real-time
 - Draws skeletal connections between joints
 - Uses ML5.js bodyPose model
+
+**Usage:**
+1. Grant camera permissions when prompted
+2. Stand in front of your camera
+3. See your pose detected and drawn segment in real time.
+
 
 ## 🛠 Tech Stack
 
