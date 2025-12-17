@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Recognition</title>
+    <link rel="stylesheet" href="demo/css/imageRecognition.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+    <script src="demo/js/imageRecognition.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Image Recognition</h1>
+            <p class="subtitle">Upload an image to identify objects using MobileNet</p>
+        </header>
+
+        <div class="card upload-section">
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput" accept="image/*">
+                <label for="fileInput" class="file-input-label">
+                    Choose an image to classify
+                </label>
+            </div>
+        </div>
+
+        <div class="canvas-container" id="canvasContainer"></div>
+
+        <div id="results">
+            <h3>Classification Results</h3>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+</body>
+</html>

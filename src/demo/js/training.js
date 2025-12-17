@@ -14,7 +14,6 @@ async function initNN() {
         hiddenUnits: 16
     };
 
-    // ml5 neural network
     nn = ml5.neuralNetwork(options);
     logToDiv('✓ Rete neurale inizializzata');
     logToDiv(`→ Inputs: ${options.inputs.join(', ')}`);
