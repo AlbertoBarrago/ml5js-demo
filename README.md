@@ -53,7 +53,7 @@ Train a custom neural network to classify product quality based on sensor data.
 4. Test predictions with the prediction panel
 5. Save your trained model for later use
 
-# 3 Body Segmentation
+### 3 Body Segmentation
 **URL:** `http://localhost:3000/body-segmentation`
 
 Real-time body segmentation using your webcam.
@@ -68,6 +68,21 @@ Real-time body segmentation using your webcam.
 2. Stand in front of your camera
 3. See your pose detected and drawn segment in real time.
 
+### 4 Image Classification
+**URL:** `http://localhost:3000/image-classification`
+
+Classify images using a pre-trained model.
+
+**Features:**
+- Upload an image to classify
+- See the model's prediction
+
+**Usage:**
+1. Visit the image classification demo
+2. Upload an image file
+3. Wait for the model to analyze the image
+4. View the predicted label and confidence
+
 
 ## 🛠 Tech Stack
 
@@ -76,21 +91,6 @@ Real-time body segmentation using your webcam.
 - **Graphics:** p5.js (for pose visualization)
 - **Server:** Bun.serve with native routing
 
-## 📁 Project Structure
-
-```
-src/
-├── hand-pose.html      # Body pose detection demo
-├── training.html       # Neural network training demo
-└── poc/
-    ├── css/            # Stylesheets
-    │   ├── handPose.css
-    │   └── training.css
-    └── js/             # JavaScript modules
-        ├── handPose.js
-        ├── training.js
-        └── utils.js
-```
 
 ## 🔧 Configuration
 
