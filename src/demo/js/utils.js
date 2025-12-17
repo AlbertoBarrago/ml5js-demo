@@ -22,5 +22,3 @@ window.logToDiv = function logToDiv(message) {
     logDiv.appendChild(entry);
     logDiv.scrollTop = logDiv.scrollHeight;
 }
-
-export const logToDiv = window.logToDiv;

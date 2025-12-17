@@ -4,11 +4,12 @@
 const config = {
     routes: {
         "/": "./src/index.html",
-        "/hand-pose": "./src/hand-pose.html",
         "/training": "./src/training.html",
+        "/sentiment": "./src/sentiment.html",
+        "/hand-pose": "./src/hand-pose.html",
+        "/sound-classifier": "./src/sound-classifier.html",
         "/body-segmentation": "./src/body-segmentation.html",
         "/image-recognition": "./src/image-recognition.html",
-        "/sound-classifier": "./src/sound-classifier.html",
     },
     port: 3000,
 };
