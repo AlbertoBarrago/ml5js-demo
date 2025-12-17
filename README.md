@@ -1,4 +1,7 @@
-# DevAI - ML5.js Learning Projects
+# ML5.js Learning Projects
+![ML5.js](https://img.shields.io/badge/ML5.js-AI-blueviolet?style=for-the-badge&logo=tensorflow)
+![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun)
+![TensorFlow](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow)
 
 Welcome! This repository contains interactive demos for learning machine learning in the browser using ML5.js and
 TensorFlow.js.
