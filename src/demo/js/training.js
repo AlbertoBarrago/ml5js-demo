@@ -3,6 +3,7 @@ let trainingData = [];
 let isTrained = false;
 
 async function initNN() {
+    // required for training on GPU, wait that webgl is ready
     await tf.ready();
 
     const options = {

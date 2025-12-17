@@ -1,4 +1,6 @@
-// Configuration: map routes to HTML files in the src folder
+/**
+ * Add here the routes you want to serve.
+ */
 const config = {
     routes: {
         "/": "./src/index.html",
@@ -6,6 +8,7 @@ const config = {
         "/training": "./src/training.html",
         "/body-segmentation": "./src/body-segmentation.html",
         "/image-recognition": "./src/image-recognition.html",
+        "/sound-classifier": "./src/sound-classifier.html",
     },
     port: 3000,
 };
@@ -15,7 +18,6 @@ Bun.serve({
     async fetch(req) {
         const url = new URL(req.url);
 
-        // Handle favicon at root level
         if (url.pathname === "/favicon.ico") {
             const file = Bun.file("./src/demo/favicon.ico");
             if (await file.exists()) {

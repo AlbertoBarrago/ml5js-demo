@@ -16,6 +16,19 @@ body {
     padding: 2rem;
 }
 
+footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+footer a {
+    color: #4299e1;
+    text-decoration: none;
+}
+small {
+    color: #216cd5;
+}
+
 .container {
     max-width: 800px;
     width: 100%;
@@ -86,6 +99,10 @@ h1 {
 
 .demo-card.body-segmentation {
     border-left-color: #9f7aea;
+}
+
+.demo-card.sound-classification {
+    border-left-color: #e53e3e;
 }
 
 @media (max-width: 768px) {
