@@ -31,12 +31,10 @@ function setup() {
 }
 
 function modelReady() {
-    console.log("Model Loaded!");
     // Start classification with microphone after model loads
     classifier.classifyStart(gotResult);
 }
 function gotResult(results) {
-    console.log("Top result:", results[0].label, results[0].confidence);
     if (results && results[0] && results[0].label !== "_background_noise_") {
         predictedWord = results[0].label;
     }
