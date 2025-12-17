@@ -1,5 +1,6 @@
 {
   "name": "devai",
+  "author": "alBz",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
@@ -8,6 +9,8 @@
     "typescript": "^5"
   },
   "scripts": {
-    "start": "bun server.js"
+    "start": "bun server.js",
+    "build": "rm -rf dist && mkdir -p dist && cp -r src/* dist/",
+    "postbuild": "surge dist hard-language.surge.sh"
   }
 }
