@@ -137,6 +137,51 @@ h1 {
     font-size: 0.95rem;
 }
 
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    background: #4299e1;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #3182ce;
+}
+
+button:disabled {
+    background: #cbd5e0;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.button-secondary {
+    background: #718096;
+}
+
+.button-secondary:hover {
+    background: #4a5568;
+}
+
+.button-success {
+    background: #48bb78;
+}
+
+.button-success:hover {
+    background: #38a169;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -148,5 +193,9 @@ h1 {
 
     .card {
         padding: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
     }
 }

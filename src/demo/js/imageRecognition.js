@@ -1,9 +1,10 @@
 let classifier;
 let img;
 let canvas;
+let currentResults = null;
 
 async function setup() {
-    // Create canvas and hide it initially
+    // Create the canvas and hide it initially
     canvas = createCanvas(400, 400);
     canvas.parent('canvasContainer');
     canvas.hide();
@@ -20,6 +21,10 @@ async function setup() {
 
     // Setup file input handler
     document.getElementById('fileInput').addEventListener('change', handleFile);
+
+    // Set up button handlers
+    document.getElementById('clearBtn').addEventListener('click', clearAll);
+    document.getElementById('downloadBtn').addEventListener('click', downloadJSON);
 
     noLoop();
 }
@@ -75,6 +80,7 @@ function draw() {
 }
 
 function _displayResults(results) {
+    currentResults = results;
     const resultsDiv = document.getElementById('resultsContent');
     let html = '';
 
@@ -90,4 +96,46 @@ function _displayResults(results) {
 
     resultsDiv.innerHTML = html;
     document.getElementById('results').classList.add('active');
+}
+
+function clearAll() {
+    // Clear file input
+    document.getElementById('fileInput').value = '';
+
+    // Hide canvas
+    canvas.hide();
+    clear();
+
+    // Hide results
+    document.getElementById('results').classList.remove('active');
+
+    // Clear variables
+    img = null;
+    currentResults = null;
+}
+
+function downloadJSON() {
+    if (!currentResults) {
+        alert('No results to download');
+        return;
+    }
+
+    const data = {
+        timestamp: new Date().toISOString(),
+        model: 'MobileNet',
+        results: currentResults.map(result => ({
+            label: result.label,
+            confidence: result.confidence
+        }))
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `image-recognition-${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
