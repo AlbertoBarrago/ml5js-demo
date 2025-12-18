@@ -96,12 +96,15 @@ h1 {
 .demo-card.training {
     border-left-color: #ed8936;
 }
+.demo-card.sentiment {
+    border-left-color: #ba1c95;
+}
 
 .demo-card.body-segmentation {
     border-left-color: #9f7aea;
 }
 
-.demo-card.sound-classification {
+.demo-card.sound-classifier {
     border-left-color: #e53e3e;
 }
 
