@@ -96,13 +96,26 @@ h1 {
 .demo-card.training {
     border-left-color: #ed8936;
 }
+.demo-card.sentiment {
+    border-left-color: #ba1c95;
+}
 
 .demo-card.body-segmentation {
     border-left-color: #9f7aea;
 }
 
-.demo-card.sound-classification {
+.demo-card.sound-classifier {
     border-left-color: #e53e3e;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(10deg); }
 }
 
 @media (max-width: 768px) {
@@ -112,5 +125,13 @@ h1 {
 
     .demos-grid {
         grid-template-columns: 1fr;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
     }
 }
