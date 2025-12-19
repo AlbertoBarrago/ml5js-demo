@@ -90,6 +90,10 @@ h1 {
     border-left-color: #4299e1;
 }
 
+.demo-card.body-pose {
+    border-left-color: #780948;
+}
+
 .demo-card.image-recognition {
     border-left-color: #48bb78;
 }
