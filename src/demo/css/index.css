@@ -44,6 +44,7 @@ h1 {
     font-weight: 600;
     color: #1a202c;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .subtitle {
@@ -87,6 +88,10 @@ h1 {
 
 .demo-card.hand-pose {
     border-left-color: #4299e1;
+}
+
+.demo-card.body-pose {
+    border-left-color: #780948;
 }
 
 .demo-card.image-recognition {

@@ -6,6 +6,7 @@ const config = {
         "/": "./src/index.html",
         "/training": "./src/training.html",
         "/sentiment": "./src/sentiment.html",
+        "/body-pose": "./src/body-pose.html",
         "/hand-pose": "./src/hand-pose.html",
         "/sound-classifier": "./src/sound-classifier.html",
         "/body-segmentation": "./src/body-segmentation.html",

@@ -6,6 +6,8 @@
 Welcome! This repository contains interactive demos for learning machine learning in the browser using ML5.js and
 TensorFlow.js.
 
+> This repository is designed for educational purposes and is not intended for commercial use. Please review the [LICENSE](LICENSE) for details.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
