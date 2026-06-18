@@ -3,8 +3,8 @@
 ![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow)
 
-Welcome! This repository contains interactive demos for learning machine learning in the browser using ML5.js and
-TensorFlow.js.
+Welcome! This repository contains interactive demos for learning machine learning, computer vision, audio interaction,
+and browser-based AI experiments using ML5.js, TensorFlow.js, p5.js, and the Web Audio API.
 
 > This repository is designed for educational purposes and is not intended for commercial use. Please review the [LICENSE](LICENSE) for details.
 
@@ -26,18 +26,36 @@ bun run start
 
 The server will start at `http://localhost:3000`
 
+If port `3000` is already in use, run the server on another port:
+
+```bash
+PORT=4173 bun run start
+```
+
 ## 🛠 Tech Stack
 
 - **Runtime:** Bun
 - **ML Libraries:** ML5.js, TensorFlow.js
-- **Graphics:** p5.js (for pose visualization)
+- **Graphics:** p5.js
+- **Audio:** Web Audio API
 - **Server:** Bun.serve with native routing
+
+## 🎹 Available Demos
+
+- **Body Pose:** Real-time body tracking and skeleton visualization.
+- **Hand Pose:** Real-time hand tracking with visual effects.
+- **Invisible Piano:** Play piano-like notes with fingertip tracking, scale selection, and MIDI export.
+- **Body Segmentation:** Segment and isolate human bodies from a webcam feed.
+- **Image Recognition:** Classify images using MobileNet.
+- **Sound Classifier:** Recognize spoken commands with a pre-trained sound model.
+- **Training:** Train custom machine learning models in the browser.
+- **Sentiment:** Classify text sentiment with a pre-trained model.
 
 ## 🔧 Configuration
 
-You can add more HTML demos by editing `server.ts`:
+You can add more HTML demos by editing `server.js`:
 
-```typescript
+```javascript
 const config = {
     routes: {
         "/": "./src/index.html",
@@ -69,8 +87,9 @@ Feel free to add your own ML experiments and demos! Just create a new HTML file 
 
 ## 📝 Notes
 
-- Camera access is required for the body pose demo
+- Camera access is required for the body pose, hand pose, invisible piano, and body segmentation demos
 - Sound access is required for the sound classification demo
+- The invisible piano exports MIDI files from the notes played during the session
 - Training works best with at least 15 samples per category
 - Models are saved in browser localStorage
 
