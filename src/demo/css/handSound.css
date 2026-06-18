@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+    padding: 18px;
+    background: #0c0e12;
+    color: #f7fafc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+main,
+canvas {
+    display: block;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: none;
+    height: auto !important;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.hand-sound-panel {
+    order: -1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 64px minmax(220px, 1fr) auto;
+    grid-template-areas:
+        "profile title controls"
+        "profile copy controls"
+        "profile link controls";
+    gap: 6px 18px;
+    align-items: center;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(10, 12, 16, 0.76);
+}
+
+.hand-sound-panel h1 {
+    grid-area: title;
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.05;
+    letter-spacing: 0;
+}
+
+.hand-sound-panel p {
+    grid-area: copy;
+    margin: 0;
+    max-width: 74ch;
+    color: #c2cad6;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.profile-image {
+    grid-area: profile;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(127, 221, 255, 0.8);
+    box-shadow: 0 0 0 4px rgba(127, 221, 255, 0.08);
+}
+
+.hand-sound-controls {
+    grid-area: controls;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.hand-sound-panel select,
+.hand-sound-panel button,
+.hand-sound-panel a {
+    width: fit-content;
+    min-height: 42px;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hand-sound-panel select {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 0 34px 0 12px;
+    background:
+        linear-gradient(45deg, transparent 50%, #c2cad6 50%) right 18px center / 6px 6px no-repeat,
+        linear-gradient(135deg, #c2cad6 50%, transparent 50%) right 13px center / 6px 6px no-repeat,
+        #171b22;
+    color: #f7fafc;
+}
+
+.hand-sound-panel button {
+    border: 0;
+    padding: 0 18px;
+    background: #2ecc71;
+    color: #07130c;
+    cursor: pointer;
+}
+
+.hand-sound-panel button:disabled {
+    background: #7fddff;
+    color: #071018;
+    cursor: default;
+}
+
+.hand-sound-panel a {
+    grid-area: link;
+    display: inline-flex;
+    align-items: center;
+    color: #7fddff;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 12px;
+    }
+
+    .hand-sound-panel {
+        grid-template-columns: 52px 1fr;
+        grid-template-areas:
+            "profile title"
+            "profile copy"
+            "controls controls"
+            "link link";
+        padding: 12px;
+    }
+
+    .hand-sound-panel h1 {
+        font-size: 24px;
+    }
+
+    .profile-image {
+        width: 52px;
+        height: 52px;
+    }
+
+    .hand-sound-controls {
+        align-items: stretch;
+    }
+
+    .hand-sound-panel select,
+    .hand-sound-panel button {
+        width: 100%;
+    }
+}

@@ -5,14 +5,23 @@ const config = {
     routes: {
         "/": "./src/index.html",
         "/training": "./src/training.html",
+        "/training.html": "./src/training.html",
         "/sentiment": "./src/sentiment.html",
+        "/sentiment.html": "./src/sentiment.html",
         "/body-pose": "./src/body-pose.html",
+        "/body-pose.html": "./src/body-pose.html",
         "/hand-pose": "./src/hand-pose.html",
+        "/hand-pose.html": "./src/hand-pose.html",
+        "/hand-sound": "./src/hand-sound.html",
+        "/hand-sound.html": "./src/hand-sound.html",
         "/sound-classifier": "./src/sound-classifier.html",
+        "/sound-classifier.html": "./src/sound-classifier.html",
         "/body-segmentation": "./src/body-segmentation.html",
+        "/body-segmentation.html": "./src/body-segmentation.html",
         "/image-recognition": "./src/image-recognition.html",
+        "/image-recognition.html": "./src/image-recognition.html",
     },
-    port: 3000,
+    port: Number(Bun.env.PORT || 3000),
 };
 
 Bun.serve({

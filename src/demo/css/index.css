@@ -90,6 +90,10 @@ h1 {
     border-left-color: #4299e1;
 }
 
+.demo-card.hand-sound {
+    border-left-color: #2ecc71;
+}
+
 .demo-card.body-pose {
     border-left-color: #780948;
 }
