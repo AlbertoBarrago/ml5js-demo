@@ -45,6 +45,7 @@ PORT=4173 bun run start
 - **Body Pose:** Real-time body tracking and skeleton visualization.
 - **Hand Pose:** Real-time hand tracking with visual effects.
 - **Invisible Piano:** Play piano-like notes with fingertip tracking, scale selection, and MIDI export.
+- **Invisible Bongos:** Play two air bongos with fingertip taps and MIDI export.
 - **Body Segmentation:** Segment and isolate human bodies from a webcam feed.
 - **Image Recognition:** Classify images using MobileNet.
 - **Sound Classifier:** Recognize spoken commands with a pre-trained sound model.
@@ -87,9 +88,10 @@ Feel free to add your own ML experiments and demos! Just create a new HTML file 
 
 ## 📝 Notes
 
-- Camera access is required for the body pose, hand pose, invisible piano, and body segmentation demos
+- Camera access is required for the body pose, hand pose, invisible piano, invisible bongos, and body segmentation demos
 - Sound access is required for the sound classification demo
 - The invisible piano exports MIDI files from the notes played during the session
+- The invisible bongos demo exports drum MIDI on the General MIDI percussion channel
 - Training works best with at least 15 samples per category
 - Models are saved in browser localStorage
 

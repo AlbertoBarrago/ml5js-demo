@@ -94,6 +94,10 @@ h1 {
     border-left-color: #2ecc71;
 }
 
+.demo-card.hand-drums {
+    border-left-color: #ff8948;
+}
+
 .demo-card.body-pose {
     border-left-color: #780948;
 }

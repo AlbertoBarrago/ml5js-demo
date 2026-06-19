@@ -14,6 +14,8 @@ const config = {
         "/hand-pose.html": "./src/hand-pose.html",
         "/hand-sound": "./src/hand-sound.html",
         "/hand-sound.html": "./src/hand-sound.html",
+        "/hand-drums": "./src/hand-drums.html",
+        "/hand-drums.html": "./src/hand-drums.html",
         "/sound-classifier": "./src/sound-classifier.html",
         "/sound-classifier.html": "./src/sound-classifier.html",
         "/body-segmentation": "./src/body-segmentation.html",
